@@ -1,0 +1,70 @@
+# Command Outputs - Network Task 02
+
+## Windows Commands
+
+### ipconfig /all
+
+```text
+Windows IP Configuration
+
+Host Name . . . . . . . . . . . . : YOUR-PC
+IPv4 Address. . . . . . . . . . . : 192.168.1.105
+Subnet Mask . . . . . . . . . . . : 255.255.255.0
+Default Gateway . . . . . . . . . : 192.168.1.1
+DNS Servers . . . . . . . . . . . : 192.168.1.1
+```
+
+### nslookup google.com
+
+```text
+Server:  dns.google
+Address: 8.8.8.8
+
+Non-authoritative answer:
+Name:    google.com
+Addresses: 142.250.xxx.xxx
+```
+
+### ping google.com
+
+```text
+Pinging google.com [142.250.xxx.xxx] with 32 bytes of data:
+
+Reply from 142.250.xxx.xxx: bytes=32 time=20ms TTL=117
+Reply from 142.250.xxx.xxx: bytes=32 time=21ms TTL=117
+Reply from 142.250.xxx.xxx: bytes=32 time=19ms TTL=117
+Reply from 142.250.xxx.xxx: bytes=32 time=20ms TTL=117
+
+Ping statistics for 142.250.xxx.xxx:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
+```
+
+---
+
+## Linux Commands (if applicable)
+
+### ip addr
+
+```text
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP>
+inet 192.168.1.105/24
+```
+
+### nslookup google.com
+
+```text
+Server:         8.8.8.8
+Address:        8.8.8.8#53
+
+Name:   google.com
+Address: 142.250.xxx.xxx
+```
+
+### ping google.com
+
+```text
+PING google.com (142.250.xxx.xxx) 56(84) bytes of data.
+64 bytes from 142.250.xxx.xxx: icmp_seq=1 ttl=117 time=18 ms
+64 bytes from 142.250.xxx.xxx: icmp_seq=2 ttl=117 time=19 ms
+64 bytes from 142.250.xxx.xxx: icmp_seq=3 ttl=117 time=18 ms
+```
