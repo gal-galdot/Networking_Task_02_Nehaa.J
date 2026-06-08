@@ -180,10 +180,15 @@ DNS converts human-readable domain names into IP addresses, allowing devices to 
 ## 📸 Screenshot Evidence
 
 ✅ ipconfig /all output
+<img width="1536" height="1024" alt="ipconfig" src="https://github.com/user-attachments/assets/982e886a-c7af-47c6-891a-5135850ce948" />
+
 
 ✅ nslookup google.com output
+<img width="1445" height="1088" alt="nslookup" src="https://github.com/user-attachments/assets/8c1e468b-fdfe-4931-becf-70537d023f4d" />
 
 ✅ ping google.com output
+<img width="1536" height="1024" alt="ping" src="https://github.com/user-attachments/assets/2a4ad5d4-254f-4c57-8270-f924f90bc121" />
+
 
 ✅ Network Communication Diagram
 
