@@ -1,6 +1,6 @@
-# 🌐 Cybersecurity Internship Task 02 Report
+# 🌐 Networking Task 02 Report
 
-**Date:** June 4, 2026
+**Date:** June 8, 2026
 
 **Intern:** Nehaa J
 
@@ -9,10 +9,10 @@
 ## 🔍 Task Objectives
 
 * Understand common network devices and their functions
-* Learn IP addressing and classify IP addresses as Public or Private
-* Analyze network settings on a local device
-* Understand how DNS and network communication work
-* Practice basic networking commands
+* Learn IP addressing concepts and classifications
+* Understand network communication flow
+* Perform practical networking commands
+* Analyze DNS and network connectivity
 
 ---
 
@@ -20,19 +20,19 @@
 
 ### Router
 
-**Purpose:** Connects different networks and routes data between them.
+**Purpose:** Connects different networks and directs data traffic.
 
 **How it Works:** Uses IP addresses to determine the best path for data packets.
 
-**Real-World Usage:** Home Wi-Fi routers connect devices to the internet.
+**Real-World Usage:** Home and office internet routers.
 
 ### Switch
 
 **Purpose:** Connects devices within the same network.
 
-**How it Works:** Uses MAC addresses to forward data only to the intended device.
+**How it Works:** Uses MAC addresses to send data only to the intended device.
 
-**Real-World Usage:** Office LAN environments.
+**Real-World Usage:** Office LAN networks.
 
 ### Hub
 
@@ -40,29 +40,29 @@
 
 **How it Works:** Broadcasts incoming data to all connected devices.
 
-**Real-World Usage:** Older small-scale networks.
+**Real-World Usage:** Older network environments.
 
 ### Access Point
 
-**Purpose:** Provides wireless network access.
+**Purpose:** Provides wireless connectivity to devices.
 
-**How it Works:** Connects wireless devices to a wired network.
+**How it Works:** Extends a wired network through Wi-Fi signals.
 
-**Real-World Usage:** Wi-Fi networks in homes, schools, and offices.
+**Real-World Usage:** Homes, schools, and offices.
 
 ### Firewall
 
-**Purpose:** Protects networks from unauthorized access.
+**Purpose:** Protects a network from unauthorized access.
 
-**How it Works:** Filters incoming and outgoing network traffic.
+**How it Works:** Monitors and filters incoming and outgoing traffic.
 
-**Real-World Usage:** Personal computers and enterprise networks.
+**Real-World Usage:** Enterprise networks and personal computers.
 
 ### Modem
 
-**Purpose:** Connects a network to the Internet Service Provider (ISP).
+**Purpose:** Connects a network to an Internet Service Provider (ISP).
 
-**How it Works:** Converts digital signals for internet communication.
+**How it Works:** Converts signals between the ISP and local devices.
 
 **Real-World Usage:** Broadband internet connections.
 
@@ -70,21 +70,14 @@
 
 ## ✅ Part B: IP Address Classification
 
-| IP Address    | Category |
-| ------------- | -------- |
-| 192.168.1.10  | Private  |
-| 10.0.0.5      | Private  |
-| 172.16.5.20   | Private  |
-| 8.8.8.8       | Public   |
-| 1.1.1.1       | Public   |
-| 192.168.100.1 | Private  |
-
-### Explanation
-
-* 10.0.0.0 – 10.255.255.255 → Private Range
-* 172.16.0.0 – 172.31.255.255 → Private Range
-* 192.168.0.0 – 192.168.255.255 → Private Range
-* Public IPs are globally routable on the internet.
+| IP Address    | Classification | Reason                                        |
+| ------------- | -------------- | --------------------------------------------- |
+| 192.168.1.10  | Private        | Reserved private IP range (192.168.x.x)       |
+| 10.0.0.5      | Private        | Reserved private IP range (10.x.x.x)          |
+| 172.16.5.20   | Private        | Reserved private IP range (172.16–172.31.x.x) |
+| 8.8.8.8       | Public         | Google's public DNS server                    |
+| 1.1.1.1       | Public         | Cloudflare's public DNS server                |
+| 192.168.100.1 | Private        | Reserved private IP range (192.168.x.x)       |
 
 ---
 
@@ -110,41 +103,47 @@ Private IP Address.
 
 **What role does your router play in your network?**
 
-The router acts as a gateway between the local network and the internet, forwarding data packets between devices and external networks.
+The router acts as the gateway between my local network and the internet. It forwards data packets between devices and external servers.
 
 **What would happen if the DNS server stopped working?**
 
-Domain names such as google.com would not resolve into IP addresses, making websites inaccessible by name.
+Websites could not be accessed using domain names because the system would be unable to translate domain names into IP addresses.
 
 ---
 
 ## ✅ Part D: Network Communication Flow
 
-### Communication Diagram
+### Network Communication Diagram
 
+```text
 Your Device
-⬇
-Router
-⬇
-DNS Server
-⬇
-Google Server
-⬇
+      ↓
+    Router
+      ↓
+  DNS Server
+      ↓
+ Google Server
+      ↓
 Response Back to Device
+```
 
-### Explanation
+### Communication Process
 
-1. The user enters [www.google.com](http://www.google.com) in the browser.
-2. The router forwards the request to a DNS server.
-3. The DNS server resolves the domain name into an IP address.
-4. The request is sent to Google's server.
-5. Google returns the requested webpage to the device.
+**Step 1:** The user enters [www.google.com](http://www.google.com) in the browser.
+
+**Step 2:** The router forwards the request to a DNS server.
+
+**Step 3:** The DNS server translates the domain name into an IP address.
+
+**Step 4:** The request is sent to Google's server using the resolved IP address.
+
+**Step 5:** Google processes the request and sends the webpage data back to the user's device.
 
 ---
 
 ## ✅ Part E: Practical Command Exercise
 
-### Commands Executed
+### Commands Used
 
 #### Windows
 
@@ -166,15 +165,15 @@ ping google.com
 
 **What IP address did DNS return for Google?**
 
-(Insert your nslookup result)
+(Insert the IP address from your nslookup result.)
 
 **Was the ping successful?**
 
-Yes, the ping was successful.
+Yes, the ping was successful and replies were received from Google's server.
 
 **Why is DNS important before communication begins?**
 
-DNS translates human-readable domain names into IP addresses, enabling devices to locate servers on the internet.
+DNS converts human-readable domain names into IP addresses, allowing devices to locate and communicate with servers on the internet.
 
 ---
 
@@ -194,4 +193,4 @@ All screenshots are included in the repository under `/Screenshots/`.
 
 ## 🎯 Learning Outcome
 
-This task improved my understanding of networking fundamentals, including network devices, IP addressing, DNS resolution, and how data travels across networks. It also provided hands-on experience with basic networking commands and network troubleshooting concepts.
+Through this task, I learned about network devices, IP address classifications, DNS resolution, and how data travels through a network. I also gained practical experience using networking commands to analyze connectivity and network configurations.
